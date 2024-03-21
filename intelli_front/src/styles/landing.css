@@ -1,0 +1,364 @@
+#landing{
+    position: relative;
+    height: 89vh;
+    top: 0vh;
+    left: 0vw;
+    width: 100vw;
+    background-color: black;
+}
+
+#bg1{
+    position: absolute;
+    left: 0vw;
+    height: 89vh;
+    min-width: 100vw;
+    opacity: 0.5;
+}
+
+#landing-container{
+    position: relative;
+    height: 83vh;
+    width: 100vw;
+    display: flex;
+}
+
+#landing-left{
+    display: grid;
+    width: 50vw;
+    height: 89vh;
+}
+
+#landing-welcome-div{
+    padding: 5vh;
+    height: 10vh;
+    color: white;
+    font-size: 3.5vh;
+}
+
+#landing-text{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh;
+    margin-top: 5vh;
+    height: 30vh;
+    width: 40vw;
+    background-color: rgba(23, 133, 130, 0.5);
+    left: 0vw;
+    border-radius: 0 40px 40px 0;
+}
+
+#landing-right{
+    display: grid;
+    justify-content: center;
+    height: 89vh;
+    width: 50vw;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#dev{
+    margin-top: 30vh;
+    height: 7vh;
+    width: 20vw;
+    border: none;
+    border-radius: 5vh;
+    background-color: #0A1828;
+    color: white;
+    font-size: 2vh;
+}
+
+#dev:hover{
+    margin-top: 30vh;
+    height: 7vh;
+    width: 20vw;
+    border: none;
+    border-radius: 5vh;
+    background-color: #0A1828;
+    color: white;
+    box-shadow: 2px 0px 40px 5px rgba(255,255,255,0.5);
+-webkit-box-shadow: 2px 0px 40px 5px rgba(255,255,255,0.5);
+-moz-box-shadow: 2px 0px 40px 5px rgba(255,255,255,0.5);
+    text-decoration: underline;
+    font-size: 2vh;
+}
+
+#rec{
+    margin-bottom: 30vh;
+    height: 7vh;
+    border: none;
+    border-radius: 5vh;
+    background-color: #BFA181;
+    color: white;
+    font-size: 2vh;
+    
+}
+
+#rec:hover{
+    margin-bottom: 30vh;
+    height: 7vh;
+    border: none;
+    border-radius: 5vh;
+    background-color: #BFA181;
+    color: white;
+    box-shadow: 2px 0px 40px 5px rgba(255,255,255,0.5);
+-webkit-box-shadow: 2px 0px 40px 5px rgba(255,255,255,0.5);
+-moz-box-shadow: 2px 0px 40px 5px rgba(255,255,255,0.5);
+    text-decoration: underline;
+    font-size: 2vh;
+}
+
+#landing-login{
+    position: absolute;
+    right: 5vw;
+    top: 3vh;
+    font-size: 4vh;
+    color: #178582;
+    text-decoration: none;
+}
+
+#landing-login:hover{
+    position: absolute;
+    right: 5vw;
+    top: 3vh;
+    font-size: 4vh;
+    color: #178582;
+    text-decoration: underline;
+}
+
+#landing-why{
+    position: sticky;
+    display: grid;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0A1828;
+}
+
+#landing-why-head{
+    position: relative;
+    margin-top: 10vh;
+    color: white;
+    font-size: 3vh;
+    border-radius: 5vh;
+    background-color: #178582;
+    height: 10vh;
+    width: 20vw;
+    left: 30vw;
+}
+
+#landing-why-container{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 80vw;
+    color: white;
+    top: -8vh;
+}
+
+#lwc-left{
+    display: grid;
+    width: 50vw;
+    border-right: 1px solid white;
+    padding-right: 5vw;
+    font-size: 2vh;
+}
+
+#lwc-right{
+    display: grid;
+    width: 50vw;
+    padding-left: 5vw;
+    font-size: 2vh;
+}
+
+#uatt{
+    border-bottom: 1px solid white;
+    padding: 3vh;
+    font-size: 3vh;
+}
+
+#landing-getting-started{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+}
+
+#bg2{
+    position: absolute;
+    top: 0vh;
+    left: 0vh;
+    min-width: 100vw;
+    min-height: 100vh;
+    opacity: 0.5;
+}
+
+#lgs-head{
+    position: relative;
+    margin-top: 5vh;
+    color: white;
+    font-size: 3vh;
+    height: 10vh;
+    width: 20vw;
+    left: 40vw;
+    font-size: 4vh;
+}
+
+#lgs-container{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 79.2vh;
+    width: 100vw;
+    color: white;
+    background-color: rgba(10, 24, 40, 0.5);
+    margin-top: 5vh;
+}
+
+#lgs-left{
+    display: grid;
+    width: 50vw;
+    border-right: 1px solid white;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    font-size: 3vh;
+}
+
+#lgs-right{
+    display: grid;
+    width: 50vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: 3vh;
+}
+
+#lgs-uatt{
+    border-bottom: 1px solid white;
+    padding-bottom: 5vh;
+    font-size: 2vh;
+}
+
+#lgs-text{
+    padding-bottom: 5vh;
+    font-size: 2vh;
+}
+
+#landing-user-reviews{
+    position:relative;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+}
+
+#lur-left{
+    position: relative;
+    height: 100vh;
+    width: 50vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #178582;
+}
+
+#lur-right{
+    position: relative;
+    height: 100vh;
+    width: 50vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #0A1828;
+    overflow-y: scroll;
+}
+
+#client-left{
+    font-size: 5vh;
+    color: white;
+    width: 30vw;
+}
+
+#review-container{
+    position: relative;
+    height: 40vh;
+    width: 40vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#rcl{
+    display: grid;
+    align-items: left;
+    justify-content: left;
+}
+
+#rcl-stars{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#ui{
+    position: relative;
+    max-width: 5vw;
+}
+
+#stars{
+    position: relative;
+    max-width: 1vw;
+}
+
+#rcr{
+    position: relative;
+    background-color: #BFA181;
+    margin-left: 3vw;
+    max-height: 20vh;
+    max-width: 30vw;
+    border-radius: 5vh;
+    overflow-y: hidden;
+    padding-right: 3vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+#rcr-content{
+    position: relative;
+    margin-left: 3vw;
+    max-height: 20vh;
+    max-width: 30vw;
+    overflow-y: scroll;
+    padding-right: 2vw;
+}
+
+#rcr-full{
+    position: relative;
+    border: 1px solid white;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+border-radius: 4vh;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #888;
+border-radius: 4vh;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}

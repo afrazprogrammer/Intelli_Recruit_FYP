@@ -1,0 +1,31 @@
+#header{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: #0A1828;
+    height: 3vh;
+    padding: 4vh;
+    max-width: 100vw;
+}
+
+#intelli{
+    color: #178582;
+    margin-left: 2vh;
+    font-size: 4vh;
+}
+
+#intelli +p{
+    color: white;
+    font-size: 4vh;
+    margin-left: 0.6vh;
+    margin-right: 0.6vh;
+}
+
+#recruit{
+    color: #BFA181;
+    font-size: 4vh;
+}
+
+#logo{
+    max-width: 6vh;
+}

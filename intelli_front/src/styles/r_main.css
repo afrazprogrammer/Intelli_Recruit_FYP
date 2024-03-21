@@ -1,0 +1,99 @@
+#r_main{
+    position: relative;
+    min-height: 83vh;
+    min-width: 99.5vw;
+    background-color: #0A1828;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#r_jpc{
+    position:relative;
+    height: 80vh;
+    width: 90vw;
+    top: -2vh;
+    border-top: 1px solid white;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+#r_bc{
+    position: absolute;
+    top: 0vh;
+    right: 0vw;
+    border: 1px solid white;
+    width: 40vw;
+    height: 10.3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#r_pfp{
+    position: absolute;
+    max-width: 3vw;
+    top: 2.5vh;
+    right: 3.5vw;
+}
+
+#r_paj{
+    position: absolute;
+    top: 3.75vh;
+    right: 9.5vw;
+    color: white;
+    font-size: 3vh;
+}
+
+#r_cand{
+    position: absolute;
+    top: 3.75vh;
+    right: 17.5vw;
+    color: white;
+    font-size: 3vh;
+    border-right: 1px solid white;
+    margin-right: 3vh;
+}
+
+#r_jl{
+    position: absolute;
+    top: 3.75vh;
+    right: 27.5vw;
+    color: white;
+    font-size: 3vh;
+    border-right: 1px solid white;
+    padding-right: 3vh;
+}
+
+#r_paj:hover{
+    position: absolute;
+    top: 3.75vh;
+    right: 9.5vw;
+    color: white;
+    font-size: 3vh;
+    border-bottom: 1px solid white;
+}
+
+#r_cand +a:hover{
+    position: absolute;
+    top: 3.75vh;
+    right: 17.5vw;
+    color: white;
+    font-size: 3vh;
+    border-right: 1px solid white;
+    padding-right: 3vh;
+    border-bottom: 1px solid white;
+}
+
+#r_jl+a:hover{
+    position: absolute;
+    top: 3.75vh;
+    right: 27.5vw;
+    color: white;
+    font-size: 3vh;
+    border-right: 1px solid white;
+    margin-right: 3vh;
+    border-bottom: 1px solid white;
+}

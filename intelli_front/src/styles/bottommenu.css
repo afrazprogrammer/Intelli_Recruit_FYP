@@ -1,0 +1,65 @@
+#bottom-bar{
+    position:relative;
+    top: 0vh;
+    left: 0vw;
+    background-color: black;
+    height: 6vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#au{
+    position:relative;
+    padding-right: 1vw;
+    border-right: 1px solid white;
+}
+
+#faq{
+    position:relative;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-right: 1px solid white;
+}
+
+#cu{
+    position:relative;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-right: 1px solid white;
+}
+
+#pp{
+    position:relative;
+    padding-left: 1vw;
+}
+
+#au:hover{
+    position:relative;
+    padding-right: 1vw;
+    border-right: 1px solid white;
+    text-decoration: underline;
+}
+
+#faq:hover{
+    position:relative;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-right: 1px solid white;
+    text-decoration: underline;
+}
+
+#cu:hover{
+    position:relative;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-right: 1px solid white;
+    text-decoration: underline;
+}
+
+#pp:hover{
+    position:relative;
+    padding-left: 1vw;
+    text-decoration: underline;
+}

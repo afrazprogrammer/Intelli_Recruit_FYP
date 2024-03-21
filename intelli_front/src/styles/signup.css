@@ -1,0 +1,97 @@
+#signup{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0A1828;
+    justify-content: center;
+    align-items: center;
+}
+
+#signup-left{
+    height: 100vh;
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#signup-middle{
+    height: 80vh;
+    width: 40vw;
+    border-radius: 5vh;
+    border: 3px solid #BFA181;
+    display: grid;
+    background-color: #178582;
+    align-items: center;
+    justify-content: center;
+}
+
+#signup-right{
+    height: 100vh;
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#signup-heading{
+    color: white;
+    font-size: 3vh;
+    margin-top: 10vh;
+}
+
+#signup-username{
+    position: relative;
+    height: 5vh;
+    width: 25vw;
+    border: none;
+    border-radius: 3vh; 
+    padding-left: 2vh;
+    color: black;
+    font-size: 2vh;
+}
+
+#signup-password{
+    position: relative;
+    height: 5vh;
+    width: 25vw;
+    border: none;
+    border-radius: 3vh; 
+    padding-left: 2vh;
+    color: black;
+    font-size: 2vh;
+}
+
+#signup-button{
+    position: relative;
+    height: 5vh;
+    width: 26vw;
+    border: 1px solid white;
+    color: white;
+    background-color: #BFA181;
+    border-radius: 5vh;
+    font-size: 2vh;
+}
+
+#signup-button:hover{
+    position: relative;
+    height: 5vh;
+    width: 26vw;
+    border: 1px solid white;
+    color: white;
+    background-color: #BFA181;
+    border-radius: 5vh;
+    font-size: 2vh;
+    box-shadow: 2px 0px 40px 5px rgba(10, 24, 40, 0.5);
+    -webkit-box-shadow: 2px 0px 40px 5px rgba(10, 24, 40, 0.5);
+    -moz-box-shadow: 2px 0px 40px 5px rgba(10, 24, 40, 0.5);
+}
+
+#signup-login{
+    color: white;
+}
+
+#signup-login a:hover{
+    text-decoration: underline;
+}
