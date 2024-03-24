@@ -1,0 +1,218 @@
+INSTALLATIONS: 
+pip install django djangorestframework djangorestframework-simplejwt Pillow psycopg2
+
+Virtual Environment: python3 -m venv venv
+I am using mac: source venv/bin/activate
+For windows: .\venv\Scripts\activate
+######
+To fetch input from the frontend, I'm using request.query_params.get, which grabs data sent from the frontend through the URL. This lets the backend use the received data to do its job, making it easy for the frontend to share details with the backend by adding them to the URL.
+######
+
+######
+For posting different jobs by the different companies:
+######
+Jobs APP:
+
+MODELS:
+
+The jobs database contains the following fields: company email, company name, job title, job description, posted date (by default the present date), salary package, benefits, required skills, post, city, country, required experience in years, required education, location (whether remote or onsite), job status (hiring or filled, by default it will be hiring). Company name, company email, and posted date of the job must be unique while posting a job.
+
+URLs:
+
+manage: For the company. Companies can post a job, update job details, update a job status from hiring to filled, delete a job, and get a list of all the jobs posted by itself.
+detail: This is the URL created for job applicants. They can view the list of all the jobs posted by all the companies.
+search: For job applicants. They can search in all the jobs posted by different companies using keywords.
+saved_job: For job applicants to view all the jobs saved by themselves.
+
+VIEWS:
+
+ManageJobView:
+
+GET: A company can get the list of all the jobs posted by itself. It filters the jobs database by the email of the current user logged in, allowing the company to view only the jobs it has posted. Required input is company email.
+POST: For posting different jobs. Required input is all the database fields.
+PUT: For updating a job detail. It will filter the job by company email, title of the job, and posted date. This way, the company can update only the job details that are posted by itself. If two jobs have the same title, the posted date is checked to differentiate which job details the company wants to update. Required input is job title, posted date, company email.
+PATCH: This is to change the status of the job, e.g., from hiring to filled. Required input is job status, job title, posted date, and company email.
+
+JobListView:
+This view is for the job applicant to view all the jobs posted by different companies.
+
+SavedJobListView:
+This view displays all the jobs saved by a particular job applicant. It takes posted date, job title, and company email as inputs to display the saved jobs. Required input is posted date, job title, and company email.
+
+SearchJobView:
+This view is created so that the user can search in the job list posted by different companies using different keywords like company, country, post, salary package, job location (remote or onsite). A search can be made by one keyword at a time. Required input is a search keyword and user email for authentication.
+
+######
+For Checking the Job Statistics (Number of Views, Number of Applied Candidates, Number of Applicants That Have Saved the Job):
+######
+application App:
+
+MODELS:
+
+The saved_jobs database contains the following fields: user email, company name, company email, job title, job posted date. The jobanalytics database contains the following fields: company name, company email, job title, posted date of job, number of views, number of saved, number of applied.
+
+URLs:
+
+saved_jobs: To list all the jobs saved by a particular job applicant.
+jobs_statistics: To seek the popularity of a job by viewing the number of views, number of applications, and number of saves.
+
+VIEWS:
+
+ManageSavedJobView:
+This view allows the job applicant to view all the jobs saved by themselves, as well as add jobs to this list or remove a job from the list. 
+GET Required input: user email for authentication. 
+DELETE Required input: job id, company email, and job title.
+
+ManageStatisticsView:
+This view is designed to understand the popularity of a certain job. It checks whether the user is a job applicant or not. If the user is a job applicant (not a company), then job statistics can be managed. Functions include: Viewing job statistics of a particular job, Updating job statistics, Deleting job statistics. 
+GET Required input: user email so that the company can view the statistics of the jobs posted by itself only.Job title, company name, job posted date. 
+PATCH Required input: job title, company name, date posted, field name, and its value that you want to update. 
+DELETE Required input: job title, company name, date posted and company email for authentication. When a job is deleted by a company, the job statistics of that job should also be deleted. This deletion should ideally be handled on the frontend.
+
+
+
+######
+For getting feedback about the web application from users (cmpanies and job applicants)
+######
+Feedback App;
+
+MODELS:
+
+comments database inclues the following details:
+user email, user name, comment and data and time of the creation of comment which is by default set to current date and time (so no need to give this as input).
+
+URLs:
+
+comments: to display the comments posted by all the users whether a user is a company or job applicant. In this way, job applicants will get to know how much this web application is trusted by other job applicants as well as the companies that hire people for its posted jobs using this web application.
+
+VIEWS:
+
+commentView:
+To view or post different comments. Users can also delete the comments posted by themselves. A user can update the comment posted by itself. 
+GET Required input: No input comments are displayed by the latest posted comment. 
+POST Required input: All database fields. 
+PATCH Required input: comment id and new comment. 
+DELETE Required input: Comment id is required to delete a certain comment.
+
+######
+For creating Profile for all kind of users
+######
+Profile App:
+######
+Company Profile and job applicant Profile:
+######
+
+MODELS:
+
+Company For profile creation:
+name, email, contact_no, about, min_salary_offered, company_picture, instagram_account, facebook_account, linkedin_profile.
+NOTE: As the company profile requires company picture for profile creation so take input in the form format.
+JobSeeker for job applicant profile creation:
+email, first name, last name, cnic, date of birth, address, province etc.
+CompanyLocation : email (company email), address, city, country.
+CompanyProjects : email, project name, project duration, client name, project description.
+Project: email (job seeker email), company(name of the company), project name, project duration, client name, project description.
+Skill : email (job seeker email), cnic, name (skill name)
+
+VIEWS:
+
+compView:
+For creating, updating, getting, and deleting a company profile.
+GET Required input: A company can view only its own created profile, while the job applicant can view the company's profiles by providing the company email as input to retrieve the required company profile.
+POST Required input: All database fields.
+PUT: To update a company profile, which can be updated by the company that has created the profile.
+DELETE: A profile can only be deleted by the company using the company email.
+
+comprojView:
+For creating, updating, getting and deleting a company projects.
+GET, PUT,POST, DELETE is same for all the company profile related view.
+For deleting a project if the project title is given along with the user email than only that project will be deleted else all the projects associated with that user email will be deleted.
+
+complocView:
+For creating, updating, getting and deleting a company locations.
+
+jobseekerView:
+For creating, updating, getting, and deleting a applicant profile.
+GET Required input: A job applicant can view only its own created profile, while the company can view the job applicants' profiles by providing the job applicant email as input to retrieve the required job applicant profile.
+POST Required input: All database fields.
+PUT: To update a job applicant profile, which can be updated by the applicant that has created the profile.
+DELETE: A profile can only be deleted by the applicant using the applicant email.
+
+skillView:
+For creating, getting, and deleting a applicant skills.
+For deleting a skill if the name of the skill is given then only that skill will be deleted else all the skills of the user will be deleted.
+
+
+projectView:
+For creating, updating, getting, and deleting a applicant projects.
+For updating a project project name and user email is required.
+For deleting a project if the project title is given along with the user email than only that project will be deleted else all the projects associated with that user email will be deleted.
+
+URLs:
+
+company/profile : For creating, updating, getting, and deleting a company profile.
+company/location : For creating, updating, getting, and deleting a company locations.
+company/projects : For creating, updating, getting, and deleting a company projects.
+applicant/profile : For creating, updating, getting, and deleting a applicant profile.
+applicant/skill : For creating, updating, getting, and deleting a applicant skills.
+applicant/project : For creating, updating, getting, and deleting a applicant projects.
+
+
+######
+For storing interview question and answers of a user as well as its evaluation results
+######
+Interview App:
+
+MODELS: 
+
+job interview database have the following fields: 
+applicant email, company email, applicant first name, applicant last name, date and time of the interview, job posted date, question, answer.
+Interview evaluation database have the following fields:
+applicant email, company email, job title, interview date and time, personality test result, result
+
+URLs:
+
+applicant : job interview views to add interview details to interview database and fetch the data from interview database to feed it to the ai model to generate interview results.
+company : job interview views to display the interview details of all the applicants for a particular job.
+evaluation : View to store the results of a particular job and companies can access the evaluation results of the interviews conducted for the jobs posted by them.
+
+VIEWS:
+
+interviewApplicant View:
+This view is created to add different details to the database. These details will be added to the interview database from the applicant side. We can fetch the interview details for a particular job and user. 
+GET required input: job title, company email and job posted date.
+POST required input: all the interview database fields.
+interviewCompanyView:
+This view is created so that the company can view the interview details of all the applicants that have attempted the interview for a particular job. When a job is deleted along with its details so ideally the job interview data in interview database and the interview evaluation data in evaluation database should also be deleted.
+This should ideally be handled in fornt end.
+GET required input: job title and job posted date and company email for authentication.
+DELETE required input: job title and job posted date and company email for authentication.
+evaluationView:
+It should add data to the evaluation database in order to store the results of a particular job applicant interview conducted for a particular job.
+GET required input: job title, aplicant email, job posted date, data and time of the interview and company email for authentication.
+POST required input : all evaluation database fields.
+DELETE required inpt: job title, job posted date, company email for authentication.
+
+
+
+####################################################
+When a company deletes his profile all of the jobs posted by it should also be deleted along with the interview and evaluation results of that database.
+
+When a job applicant deletes a profile so its data in interview and evaluation database is not deleted.
+
+Job applicant should apply for a particular job only once so when the interview is finished make entry in evaluation table, give the results value some random values as you can update them when the model generates the result. So when the job applicant applies for the interview again check the entries in evaluation database, if it contains data then the job applicant will not be able to apply for the interview.
+
+
+################################################
+admin.py : for registering multiple databases. 
+if a user is deleted then all its related data is also deleted. If a company account gets deleted then all the jobs posted by it and all the jobs related data gets deleted.
+
+python manage.py createsuperuser
+
+All the databases is registered in admin
+
+
+
+
+
+
