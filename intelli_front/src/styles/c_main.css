@@ -1,4 +1,4 @@
-#r_main{
+#c_main{
     position: relative;
     min-height: 79vh;
     max-height: 79vh;
@@ -14,7 +14,7 @@
     overflow-y: scroll;
 }
 
-#r_jpc{
+#c_jpc{
     position:relative;
     height: 80vh;
     width: 90vw;
@@ -25,7 +25,7 @@
     justify-content: center;
 }
 
-#r_bc{
+#c_bc{
     position: absolute;
     top: 0vh;
     right: 0vw;
@@ -36,14 +36,14 @@
     align-items: center;
 }
 
-#r_pfp{
+#c_pfp{
     position: relative;
     max-width: 3vw;
     top: 0vh;
     right: -18vw;
 }
 
-#r_paj{
+#c_paj{
     position: relative;
     top: 0vh;
     right: -6vw;
@@ -52,60 +52,49 @@
     
 }
 
-#r_cand{
+#c_cand{
     position: relative;
     top: 0vh;
-    right: 12vw;
-    color: white;
+    right: 0vw;
     font-size: 3vh;
-    border-right: 1px solid white;
     padding-right: 2vw;
     color:#BFA181;
 }
 
-#r_cand>a:visited{
+#c_cand>a:visited{
     position: relative;
     top: 0vh;
-    right: 12vw;
-    color: white;
+    right: 0vw;
     font-size: 3vh;
-    border-right: 1px solid white;
     padding-right: 2vw;
     color:#BFA181;
 }
 
-#r_jl{
+#c_jl{
     position: relative;
     top: 0vh;
-    right: 30vw;
-    color: white;
+    right: 25vw;
     font-size: 3vh;
     border-right: 1px solid white;
     padding-right: 2vw;
     color:#178582;
 }
 
-#r_jl>a:visited{
+#c_jl>a:visited{
     position: relative;
     top: 0vh;
-    right: 30vw;
-    color: white;
+    right: 25vw;
     font-size: 3vh;
     border-right: 1px solid white;
     padding-right: 2vw;
     color:#178582;
-}
-
-a{
-    color: white;
-    text-decoration: none;
 }
 
 a:hover{
     text-decoration: underline;
 }
 
-#r_job{
+#c_job{
     position: relative;
     display: flex;
     background-color: #178582;

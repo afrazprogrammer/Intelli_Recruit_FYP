@@ -1,0 +1,28 @@
+#menu{
+    position: fixed;
+    right: 0vw;
+    width: 13vw;
+    height: 83vw;
+    background-color: #178582;
+    padding-top: 10vh;
+    color: white;
+    font-size: 2vh;
+    text-align: center;
+    justify-content: center;
+}
+
+#menu_name{
+    position: relative;
+    margin-top: 2vh;
+    margin-bottom: 10vh;
+}
+
+#menu_a{
+    position:relative;
+    margin-top: 2vh;
+}
+
+#menu_a:hover{
+    position:relative;
+    cursor: default;
+}

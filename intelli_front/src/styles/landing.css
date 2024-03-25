@@ -86,6 +86,7 @@
 #rec{
     margin-bottom: 30vh;
     height: 7vh;
+    width: 20vw;
     border: none;
     border-radius: 5vh;
     background-color: #BFA181;
@@ -97,6 +98,7 @@
 #rec:hover{
     margin-bottom: 30vh;
     height: 7vh;
+    width: 20vw;
     border: none;
     border-radius: 5vh;
     background-color: #BFA181;
@@ -361,4 +363,8 @@ border-radius: 4vh;
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 background: #555;
+}
+
+#landing_body{
+    text-align: center;
 }

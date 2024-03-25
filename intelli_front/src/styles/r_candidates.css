@@ -1,0 +1,213 @@
+#r_candidates{
+    position: relative;
+    min-height: 83vh;
+    width: 90vw;
+    background-color: #0A1828;
+    border-top: 1px solid white;
+    left: 5vw;
+    display: grid;
+    justify-content: center;
+    padding-bottom: 2vh;
+}
+
+#r_top{
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    position: relative;
+}
+
+#r_jd{
+    color: white;
+    font-size: 4vh;
+    margin-right: 4vw;
+}
+
+#r_sc{
+    color: white;
+    font-size: 4vh;
+    margin-left: 7vw;
+}
+
+#r_bot{
+    position: relative;
+    top:0vh;
+    display:flex;
+    width: 90vw;
+}
+
+
+
+#r_left{
+    position: relative;
+    border-right: 1px solid white;
+    max-width: 50vw;
+    min-height: 70vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    color: white;
+    text-align: center;
+}
+
+#r_left_list{
+    position: relative;
+    min-width: 45vw;
+    text-align: left;
+}
+
+#r_left_p{
+    text-decoration: underline;
+    margin-bottom: 0vh;
+}
+
+#pre{
+    max-width: 40vw;
+    padding-left: 2vw;
+    text-decoration: none;
+}
+
+#r_right{
+    position: relative;
+    max-width: 50vw;
+    min-height: 70vh;
+    justify-content: center;
+    padding-left: 2vw;
+}
+
+li{
+    margin-bottom: 1vh;
+}
+
+#r_sci{
+    height: 10vh;
+    width: 40vw;
+    border-radius: 5vh;
+    background-color: #178582;
+    display: flex;  
+    align-items: center;
+    padding-left: 2vh;
+    margin-bottom: 0vh;
+    margin-top: 5vh;
+}
+
+#r_candi_pfp{
+    max-width: 3vw;
+}
+
+#r_name{
+    margin-left: 2vw;
+    color: white;
+    font-size: 3vh;
+}
+
+#r_candi_vd{
+    position: sticky;
+    height: 5vh;
+    width: 7.5vw;
+    background-color:#BFA181;
+    color:white;
+    border: none;
+    border-radius: 5vh;
+    font-size: 2vh;
+    margin-left: 22.5vw;
+}
+
+#r_candi_vd:hover{
+    position: sticky;
+    height: 5vh;
+    width: 7.5vw;
+    background-color:#BFA181;
+    color:white;
+    border: none;
+    border-radius: 5vh;
+    font-size: 2vh;
+    margin-left: 22.5vw;
+    box-shadow: 2px 0px 20px 5px rgba(255,255,255,0.5);
+    -webkit-box-shadow: 2px 0px 20px 5px rgba(255,255,255,0.5);
+    -moz-box-shadow: 2px 0px 20px 5px rgba(255,255,255,0.5);
+}
+
+#vd_gb{
+    margin-left:2vw;
+    font-size: 2vh;
+    color:#BFA181;
+    background-color: transparent;
+    border: none;
+}
+
+#vd_gb:hover{
+    margin-left:2vw;
+    font-size: 2vh;
+    color:#BFA181;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+}
+
+#vd_d{
+    margin-left:70vw;
+    font-size: 2vh;
+    color:#BFA181;
+    background-color: transparent;
+    border: none;
+}
+
+#vd_d:hover{
+    margin-left:70vw;
+    font-size: 2vh;
+    color:#BFA181;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+}
+
+#vd_mb{
+    min-height: 5vh;
+    width: 90vw;
+    background-color: #0A1828;
+    border-top: 1px solid white;
+    margin-left: 5vw;
+}
+
+#vd_results{
+    position: relative;
+    height: 15vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    color: white;
+}
+
+#vd_results>p{
+    margin: 0 2vw 0 2vw;
+}
+
+progress[value] {
+    --color:#178582; /* the progress color */
+    --background: lightgrey; /* the background color */
+  
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    width: 200px;
+    margin: 0 10px;
+    border-radius: 10em;
+    background: var(--background);
+}
+progress[value]::-webkit-progress-bar {
+border-radius: 10em;
+background: var(--background);
+}
+progress[value]::-webkit-progress-value {
+border-radius: 10em;
+background: var(--color);
+}
+progress[value]::-moz-progress-bar {
+border-radius: 10em;
+background: var(--color);
+}

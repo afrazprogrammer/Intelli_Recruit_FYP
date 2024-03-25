@@ -1,0 +1,56 @@
+#vp{
+    position:relative;
+    min-height: 83vh;
+    width: 90vw;
+    margin-left: 5vw;
+    background-color: #0A1828;
+    border-top: 1px solid white;
+    padding-bottom: 5vh;
+    top: 0vh;
+}
+
+#vp_top{
+    position:relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#vp_pfp{
+    position: relative;
+    max-width: 6vw;
+    margin-top: 5vh;
+}
+
+#vp_name{
+    position:relative;
+    margin-left: 5vw;
+    margin-top: 7.5vh;
+    font-size: 3vh;
+    color: white;
+}
+
+ul{
+    position:relative;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+li{
+    position: relative;
+    color: white;
+    font-size: 3vh;
+}
+
+#vp_edu{
+    position:relative;
+    margin-top: 5vh;
+    font-size: 3vh;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+#vp_p{
+    color: white;
+    font-size: 2vh;
+}

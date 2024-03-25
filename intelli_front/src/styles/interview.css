@@ -1,0 +1,92 @@
+#interview{
+    position:relative;
+    height: 84vh;
+    width: 100vw;
+    background-color: #0A1828;
+    justify-content: center;
+    display: flex;
+    padding-top: 5vh;
+}
+
+#chatbar{
+    position:relative;
+    height: 70vh;
+    width: 70vw;
+    border: 3px dotted white;
+    border-radius: 5vh;
+}
+
+#message{
+    position: relative;
+    top: 3vh;
+    height: 6.5vh;
+    width: 66.75vw;
+    border-top: none;
+    border-radius: 0 0 5vh 5vh;
+    padding-left: 3vw;
+    background-color: transparent;
+    color:white;
+    font-size: 2vh;
+}
+
+#message:focus{
+    position: relative;
+    top: 3vh;
+    height: 6.5vh;
+    width: 66.75vw;
+    border: none;
+    border-radius: 0 0 5vh 5vh;
+    padding-left: 3vw;
+    background-color: transparent;
+    color:white;
+    font-size: 2vh;
+}
+
+#chathist{
+    position: relative;
+    top: 3vh;
+    min-height: 60vh;
+    max-height: 60vh;
+    width: 68vw;
+    border-bottom: 1px solid white;
+    display: list-item;
+    align-items: end;
+    overflow-y: scroll;
+    padding-left: 2vw;
+}
+
+#bot{
+    margin-top: 2vh;
+    min-height: 10vh;
+    max-width: 65vw;
+    display: flex;
+}
+
+#user{
+    margin-top: 2vh;
+    min-height: 10vh;
+    max-width: 65vw;
+    display: flex;
+}
+
+#botimg{
+    max-height: 3vw;
+    max-width: 3vw;
+}
+
+#userimg{
+    max-height: 3vw;
+    max-width: 3vw;
+}
+
+#bot>p{
+    padding-left: 2vw;
+    color: white;
+    font-size: 2vh;
+}
+
+#user>p{
+    padding-left: 2vw;
+    color: white;
+    font-size: 2vh;
+}
